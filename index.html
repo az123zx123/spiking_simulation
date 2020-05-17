@@ -103,11 +103,11 @@
 <div id="introduction">
     <h1>{{project_title}}</h1>
     <p>{{introduction}}</p>
-    <img src="pipeline.jpg" width="372px" height="360px">
+    <img src="flow%20chart.svg">
     <p v-html="update"></p>
-    <img src="V_i.svg">
-    <p>Where</p>
-    <img src="Psi.svg">
+    <h3>more information:</h3>
+    <a href="https://doi.org/10.3389/fnins.2020.00425">A Spiking Neuron and Population Model Based on the Growth Transform Dynamical System
+    </a>
 </div>
 <div id="download">
     <a href="https://github.com/az123zx123/large_scale_neurons_simulation">Python version</a>
@@ -131,19 +131,20 @@
     </div>
     <h2>Dataset Input and Storage</h2>
     <div v-html="common_tutorial"></div>
-    <img src="connectome.jpg">
+    <img src="create_connectome.svg">
 </form>
 <form id="demo">
 <h2>Some demonstration</h2>
     <h4>connectome in matrix form</h4>
-    <img src="demo1.png" width="60%" height="60%">
+    <img src="demo2.png" width="60%" height="60%">
     <br />
-    <a href="https://doi.org/10.7554/eLife.26975.001">A Connectome of a Learning and Memory Center in the Adult Drosophila Brain, 2017
-    </a>
     <br />
     <h4>simulation based on inversed connectome</h4>
     <img src="demo5.gif">
     <img src="raster.png">
+    <p>Data comes from</p>
+    <a href="https://doi.org/10.7554/eLife.26975.001">A Connectome of a Learning and Memory Center in the Adult Drosophila Brain, 2017
+    </a>
 </form>
 <script type="text/javascript">
 var intro = new Vue({
@@ -154,8 +155,8 @@ var intro = new Vue({
         "This tool has MATLAB version and Python version. " +
         "Both version can do simulation and visualization seperately. " +
         "MATLAB version is designed for small size connectome and Python",
-    update:"The connectome is in matrix form. Instead of directly using connectome, we use the masked inverted form Q <br />" +
-        "V is the membrane voltage and b is the external input current",
+    update:"We adopted a novel neuron model to do simulation. Based on the Growth Transform Dynamic,<bc />" +
+        "Which can construct a spiking associative memory that uses fewer spikes compared to conventional architectures, while maintaining high recall accuracy at high memory loads ",
     invert:""}
 })
 var download = new Vue({el:"#download",
